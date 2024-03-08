@@ -17,9 +17,9 @@ class ProjectController extends Controller
         ]);
     }
 
-    public function show($id)
+    public function show($slug)
     {
-        $project = Project::all()->where('id', $id);
+        $project = Project::all()->where('slug', $slug);
         
         return response()->json([
             "success" => true,
